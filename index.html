@@ -25,6 +25,22 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+  <style>
+    .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+    }
+    .box {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    .extra-space {
+        margin-right: 30px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -81,28 +97,14 @@
   <button type="button" class="collapsible">Abrir Fichas Técnicas</button>
   <div class="content">
 
-   <ul class="flexbox">
-     <li class="box"> <img class="ficha1" src="assets/img/fichas/1.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/2.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/3.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/4.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/5.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/6.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/7.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/8.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/9.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/10.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/11.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/12.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/13.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/14.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/15.jpg" alt=""> </li>
-     <li class="box"> <img class="ficha2"src="assets/img/fichas/16.jpg" alt=""> </li>
-     <li class="box2"> <img class="ficha2"src="assets/img/fichas/17.jpg" alt=""> </li>
-     <li class="box2"> <img class="ficha2"src="assets/img/fichas/18.jpg" alt=""> </li>
-     <li class="box2"> <img class="ficha2"src="assets/img/fichas/19.jpg" alt=""> </li>
-
-   </ul>
+    <ul class="flexbox">
+      <?php
+      for ($i = 1; $i <= 62; $i++) {
+          $extraSpaceClass = ($i % 2 == 0) ? 'extra-space' : '';
+          echo "<li class='box $extraSpaceClass'><img src='assets/img/fichas/$i.jpg' alt=''></li>";
+      }
+      ?>
+  </ul>
 
 
 </div>
