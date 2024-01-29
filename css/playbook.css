@@ -458,20 +458,19 @@ template {
 
 .flexbox{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap; /* Añadido para manejar múltiples elementos */
+  justify-content: center; /* Centrar los elementos horizontalmente */
+  align-items: flex-start; /* Alinear elementos al inicio verticalmente */
   list-style-type: none;
-  align-items: center;
-  justify-content: center;
-  margin-left: -2rem;
+  padding: 0; /* Eliminar el padding por defecto de ul */
+  margin: 0; /* Eliminar el margen por defecto de ul */
 
 }
 .box{
   padding: 1rem;
-
-  width: 80vw;
-  height: 80vh;
-  margin: .5rem;
+  width: auto; /* Cambiado a auto para ajustarse al contenido */
+  height: auto; /* Cambiado a auto para ajustarse al contenido */
+  margin: 0.5rem;
 
 
 }
@@ -495,6 +494,6 @@ template {
 
 
 .ficha1 , .ficha2 , .ficha3 , .ficha4 , .ficha5 , .ficha6 , .ficha7 , .ficha8 , .ficha9 , .ficha10 , .ficha11 , .ficha12 , .ficha13 , .ficha14 , .ficha15 , .ficha16 , .ficha17 , .ficha18 {
-  width: 100%;
-  height: auto;
+  max-width: 100%; /* Limitar el ancho máximo para mantener la proporción */
+  height: auto; /* Asegurar que la altura sea automática */
 }
